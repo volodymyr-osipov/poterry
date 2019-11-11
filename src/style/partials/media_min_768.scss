@@ -1,3 +1,76 @@
 @media all and (min-width: 768px) {
+  //wrap
+  .wrap {
+    padding: 0 50px;
+  }
+
+  //header
+  .header {
+    padding: 0 50px;
+  }
+
+  //logo
+  .logo {
+    a {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      span {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 2px;
+        font-style: normal;
+        margin-left: 10px;
+      }
+    }
+    &__header {
+      margin-top: 40px;
+    }
+  }
+
+  //master
+  .master {
+    &__link {
+      display: block;
+    }
+    &__header {
+      margin-top: 40px;
+    }
+
+  }
+
+  //burger
+  .burger {
+    display: none;
+  }
+
+  .intro {
+    justify-content: flex-end;
+    h1 {
+      font-size: 42px;
+      letter-spacing: 3px;
+      line-height: 35px;
+      span {
+        display: block;
+        position: relative;
+        &:after {
+          content: '';
+          display: block;
+          width: 195px;
+          height: 20px;
+          background: url('../images/icon/line-1.png') no-repeat;
+          background-size: cover;
+          position: absolute;
+          bottom: -11px;
+          left: 0;
+          z-index: -1;
+        }
+      }
+    }
+    &__nav {
+      display: flex;
+      margin: 100px 0 50px;
+    }
+  }
 }
 

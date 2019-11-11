@@ -3,14 +3,6 @@ html {
 }
 
 
-
-h1 {
-  font-size: 2em;
-  font-weight: bold;
-  line-height: 120%;
-  margin: 0 0 0.5em 0;
-}
-
 h1 {
   font-size: 2em;
   font-weight: bold;
@@ -58,13 +50,45 @@ html, body {
 }
 
 body {
-  font-family: Arial, Tahoma, sans-serif;
-  background: #fff;
-  color: #000;
+  font-family: $def-fonts;
+  background: $bg-body;
+  color: $porcelain;
   font-size: 16px;
   font-weight: 400;
   line-height: 130%;
   min-width: 320px;
+  overflow-y: hidden;
+}
+
+
+input,
+button {
+  font-family: $def-fonts;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+input[type=text],
+input[type=submit],
+textarea {
+  -webkit-appearance: none;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+* {
+  -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
+  -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
+  //-webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+* {
+  box-sizing: border-box;
 }
 
 p {
@@ -73,15 +97,23 @@ p {
 
 ul, ol {
   margin: 1em 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
 }
 
 .site-holder {
   overflow: hidden;
 }
 
-.wrap {
+.container {
   max-width: 1410px;
   margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wrap {
   padding: 0 15px;
 }
 
@@ -96,6 +128,18 @@ ul, ol {
       display: block;
     }
   }
+}
+
+a {
+  text-decoration: none;
+  transition: $transition;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.orange {
+  color: $orange;
 }
 
 

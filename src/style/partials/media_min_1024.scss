@@ -1,2 +1,26 @@
 @media all and (min-width: 1024px) {
+  //wrap
+  .wrap {
+    padding: 0 100px;
+  }
+
+  //header
+  .header {
+    padding: 0 100px;
+  }
+
+  //intro
+  .intro h1 {
+    font-size: 56px;
+    letter-spacing: 3px;
+    line-height: 42px;
+    span {
+      &:after {
+        width: 300px;
+        height: 30px;
+        bottom: -11px;
+        left: 7%;
+      }
+    }
+  }
 }
